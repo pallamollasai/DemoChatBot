@@ -1,0 +1,60 @@
+intents:
+- greet
+- goodbye
+- mood_affirm
+- mood_deny
+- mood_great
+- mood_unhappy
+- unclear
+- inform
+- end
+
+entities:
+ - username
+ - usernamedb
+
+slots:
+  img_api_response:
+    type: unfeaturized
+  username:
+    type: text
+  usernamedb:
+    type: text
+
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_end
+- utter_happy
+- utter_goodbye
+- utter_unclear
+- utter_ask_username
+- actions.ApiAction
+- actions.UserInfo
+
+templates:
+  utter_ask_username:
+  - text: "Tell me the username?"
+  - text: "please tell username?"
+  
+  utter_end:
+  - text: "thanx for the feedback"
+  
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up: {img_api_response}"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_unclear:
+  - text: "I am not sure what you are aiming for."
+  
+  utter_happy:
+  - text: "Great carry on!"
+
+  utter_goodbye:
+  - text: "Bye"

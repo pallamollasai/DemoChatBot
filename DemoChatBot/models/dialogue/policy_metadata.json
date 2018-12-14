@@ -1,0 +1,41 @@
+{
+  "action_fingerprints": {
+    "action_listen": {
+      "slots": []
+    },
+    "utter_happy": {
+      "slots": []
+    },
+    "utter_did_that_help": {
+      "slots": []
+    },
+    "action_get_user": {
+      "slots": [
+        "usernamedb"
+      ]
+    },
+    "utter_unclear": {
+      "slots": []
+    },
+    "utter_goodbye": {
+      "slots": []
+    },
+    "action_retrieve_image": {
+      "slots": [
+        "img_api_response"
+      ]
+    }
+  },
+  "rasa_core": "0.9.0a7",
+  "max_histories": [
+    5,
+    5,
+    null
+  ],
+  "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
+  "policy_names": [
+    "rasa_core.policies.memoization.MemoizationPolicy",
+    "rasa_core.policies.keras_policy.KerasPolicy",
+    "rasa_core.policies.fallback.FallbackPolicy"
+  ]
+}
